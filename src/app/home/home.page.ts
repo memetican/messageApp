@@ -20,6 +20,15 @@ export class HomePage implements OnInit {
     this.messages.getMessage('2463').subscribe((res) => {
       console.log(res);
     });
+    
+    let testMessage = {
+      content: 'Hello!',
+      submittedBy: 'Josh'
+    };
+
+    this.messages.createMessage(testMessage).subscribe((res) => {
+      console.log(res);
+    });
 
   }
 }
